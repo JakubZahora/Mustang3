@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fa2b4375-ec72-4ca4-81e8-054312496d5a/resourceGroups/mustang3-rg/providers/Microsoft.Web/sites/mustang3",
+    "appService.deploySubpath": "."
+}
