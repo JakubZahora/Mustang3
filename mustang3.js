@@ -2,6 +2,7 @@
 var contactURLArray = [];
 var contactArray = [];
 var loadingContact = 0;
+var savedArray = [];
 var currentContactIndex = 0; 
 
 // Functions
@@ -103,12 +104,27 @@ function next() {
 
 function add() {
     console.log('add()**');
+    if (savedArray.includes(currentContact)) {
+        console.log("Contact already saved!");
+    } else {
+        savedArray.push(currentContact);
+    }
+    console.log(savedArray);
+    viewCurrentContact();
 
     // Todo: Implement add functionality by inserting new element into array.
 }
 
 function remove() {
     console.log('remove()');
+    if (savedArray.includes(currentContact)){
+        id = savedArray.indexOf(currentContact);
+        savedArray.splice(id, 1);
+    } else {
+        console.log("Contact was not saved!");
+    }
+    console.log(savedArray);
+    viewCurrentContact();
 
     // Todo: Implement delete functionality by deleting element from array.
 }
@@ -185,7 +201,6 @@ function loadNextContact(URL) {
             document.getElementById("statusID").innerHTML = "Contacts Loaded (" + contactURLArray.length + ")";
             viewCurrentContact()
 
-            //Todo: Sort contacts array.
         }
     }
     contactRequest.send();
