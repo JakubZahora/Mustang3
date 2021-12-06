@@ -79,6 +79,7 @@ function viewCurrentContact() {
 
     // Todo: Add additional fields.
     document.getElementById("statusID").innerHTML = "Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length;
+    document.getElementById("savedContacts").innerHTML = JSON.stringify(savedArray);
 }
 
 function previous() {
