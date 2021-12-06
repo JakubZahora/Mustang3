@@ -1,2 +1,8 @@
-h1 { color:black; }
-body { background-color: wheat;}
+h1 { color: royalblue; text-align: center; }
+
+body { background-color: wheat; }
+
+.fields {
+    margin: 0 auto !important;
+    width: 80%;
+}

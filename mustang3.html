@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <!--
-    Author:  Eric Pogue
+    Author:  Jakub Zahora
     Class:   Web & Distributed Programming 
-    Project: Mustang v3 Lite
+    Project: Mustang v3
     Session: su18-cpsc-24700-lt1
-    Description: This application is intended to be a reference implementatin for Mustang V2.
+    Description: This application is an attempt at Mustang3 assignment.
 -->
     <head>
         <meta charset="UTF-8">
@@ -20,8 +20,8 @@
             <button type="button" onclick="loadContactsFromServer()">Load Contacts</button>
             <button type="button" onclick="logContacts()">Log Contacts</button>
             <br><br>
-
-            <table>
+        <div class="fields">
+            <table align="center">
             <tr>
                 <td>Name:</td>
                 <td> 
@@ -65,6 +65,7 @@
         Your saved Contacts:
         <p id="savedContacts"></p>
         <br><br><br>
+        </div>
         Test Data:<br>
         Import Index:<p id="indexID"></p>
         Import Contacts:<p id="contactsID"></p>

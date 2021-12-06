@@ -77,7 +77,6 @@ function viewCurrentContact() {
     document.getElementById("stateID").value = currentContact.state;
     document.getElementById("zipID").value = currentContact.zip;  
 
-    // Todo: Add additional fields.
     document.getElementById("statusID").innerHTML = "Viewing contact " + (currentContactIndex+1) + " of " + contactArray.length;
     document.getElementById("savedContacts").innerHTML = JSON.stringify(savedArray);
 }
@@ -89,7 +88,6 @@ function previous() {
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact();
 
-    // Todo: Disable previous button when currentContactIndex equal to 0.
 }
 
 function next() {
@@ -99,8 +97,6 @@ function next() {
     currentContact = contactArray[currentContactIndex];
     viewCurrentContact();
     
-    // Todo: Disable next button when there is no next item.
-    // Todo: Save changed items to contacts array and resort array.
 }
 
 function add() {
@@ -113,7 +109,6 @@ function add() {
     console.log(savedArray);
     viewCurrentContact();
 
-    // Todo: Implement add functionality by inserting new element into array.
 }
 
 function remove() {
@@ -127,7 +122,6 @@ function remove() {
     console.log(savedArray);
     viewCurrentContact();
 
-    // Todo: Implement delete functionality by deleting element from array.
 }
 
 function ZipToCityState() {
@@ -171,13 +165,9 @@ function loadIndexAndContacts() {
 }
 
 function loadContacts() {
-    // Clear the current contactArray.
     contactArray.length = 0;
     loadingContact = 0;
 
-    // Note that W3C documentation and my experimentation indicate that each XMLHttpRequest callback function must be a 
-    // unique instance of a function. A better implmentation would have had an array of callback functions instead of a 
-    // recursive call to load
     if (contactURLArray.length > loadingContact) {
         loadNextContact(contactURLArray[loadingContact]);
     }

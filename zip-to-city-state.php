@@ -1,9 +1,4 @@
 <?php
-//  Author:  Eric Pogue
-//  Class:   Web & Distributed Programming 
-//  Project: Zip code to city and state
-//  Description: This PHP script is intended to provide the default city and 
-//      state associated with a IL zip code. 
       
     $cityState = array(
         "60101" => "Addison, IL",
