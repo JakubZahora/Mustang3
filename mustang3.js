@@ -7,7 +7,6 @@ var currentContactIndex = 0;
 
 // Functions
 function initApplication() {
-    console.log('Mustang v3 Lite - Starting!'); 
     document.getElementById("nameID").value = "";   
     document.getElementById("emailID").value = "";   
     document.getElementById("cityID").value = "";   
